@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jevibe Check privacy policy</title>
+<style>:root{color-scheme:light dark;font:16px/1.65 system-ui,sans-serif;background:light-dark(#fff,#141a22);color:light-dark(#24303d,#d6dde5)}body{max-width:680px;margin:48px auto;padding:0 24px}h1{font-size:28px;line-height:1.2}h2{font-size:19px;margin-top:32px}a{color:light-dark(#246fc0,#8fbcea)}.date{font-size:14px;opacity:.7}</style></head>
+<body><main>
+<h1>Jevibe Check privacy policy</h1>
+<p class="date">Effective September 17, 2026</p>
+<p>Jevibe Check labels the tone of posts and drafts using TypeSafe's Jev API. It can blur or collapse posts that match your filter rules. Labels are not posted to the social network. Scripts on the page can read displayed labels, scores, and custom classifier names.</p>
+<h2>Text sent to TypeSafe</h2>
+<p>When you supply an API key and enable live classification, unpublished draft text is sent to TypeSafe after a short pause in typing. When you enable labels for viewed posts, visible post text is sent from supported feeds, search results, and threads. Both features are initially enabled, but requests require a saved API key and at least one enabled classifier.</p>
+<p>Requests include the text being classified, a description of whether it is a draft or published post, and enabled classifier questions and possible labels, including custom definitions. Your API key is sent in the authentication header over HTTPS to <code>api.typesafe.ai</code>. TypeSafe also receives normal connection metadata, such as your IP address.</p>
+<p>The extension does not attach images, videos, surrounding conversations, account profiles, cookies, or page URLs to classification requests. Text may itself contain links, names, personal information, or sensitive content. On custom sites, the selectors you configure determine which text is collected.</p>
+<p>Requests go directly to TypeSafe. The extension developer does not operate a proxy or receive a copy. TypeSafe's own terms and data policies govern its processing, retention, and deletion of submitted data; Jevibe Check does not control them or promise that TypeSafe retains no data. Review those policies through your <a href="https://console.typesafe.ai" rel="noreferrer">TypeSafe account</a> before use.</p>
+<h2>Data kept on your device</h2>
+<p>Chrome's local extension storage holds your API key, classifier definitions, switches, filter rules, permitted sites and selectors, pricing preferences, and aggregate usage statistics. These are not synced through Chrome Sync or sent to the developer. The key is restricted to trusted extension contexts, but local storage is not an encrypted credential vault.</p>
+<p>Usage statistics contain counts, token totals, estimated cost, and the start date of tracking. They do not contain draft text, post text, browsing history, or the API key.</p>
+<p>Viewed-post text and results can be cached temporarily in tab memory and in the background service worker to avoid duplicate requests. Tab caches end on reload or close; the background cache ends when Chrome stops the worker. Settings changes clear classification caches. The extension does not write post text, drafts, or classification history to persistent storage.</p>
+<h2>Site access</h2>
+<p>Jevibe Check runs on Bluesky. Other HTTPS sites require you to add their domain and grant Chrome's permission. The ability to request additional sites does not grant access to every website. Site origins are used locally to check permission and select detection rules. The extension does not collect a browsing-history log or monitor unrelated activity. Only add sites you trust: page content can trigger classification requests and consume your API credits.</p>
+<h2>Your controls and deletion</h2>
+<p>Disable live classification or viewed-post labels in settings to stop the corresponding requests. Removing your API key and saving stops both. A request already received by TypeSafe cannot be recalled. Remove an added site to revoke its access. Filters are off by default.</p>
+<p>You can edit or delete your key and custom settings in the extension. Clear stats resets local usage totals and their tracking date without removing your key or settings; it does not change TypeSafe billing. Uninstalling the extension removes its local extension storage; closing its social tabs clears their in-memory data. Removing local data does not delete data already received by TypeSafe. Use TypeSafe's account or support channels for its retention and deletion requests.</p>
+<h2>Limited use</h2>
+<p>Jevibe Check uses data only to provide the labels, filters, settings, and usage information described here. Its use and transfer of user data comply with the Chrome Web Store User Data Policy, including the Limited Use requirements. The extension has no advertising, analytics, tracking service, sale of personal data, or developer-operated data collection.</p>
+<h2>Policy updates</h2>
+<p>Changes will be reflected in this policy and its effective date. For questions about the extension, use the developer contact provided with its distribution or Chrome Web Store listing. For TypeSafe's handling of API requests, contact TypeSafe.</p>
+</main></body></html>

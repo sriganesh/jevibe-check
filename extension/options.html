@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jevibe Check settings</title><link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png"><link rel="stylesheet" href="options.css"></head>
+<body><main>
+<header><h1>Jevibe Check</h1><span>Settings</span></header>
+<section class="usage-section"><div class="usage-heading"><h2>Usage</h2><button type="button" id="clear-stats" class="remove">Clear stats</button></div><p id="clear-stats-status" class="small" role="status"></p><div class="usage-grid"><div><span>API requests</span><strong data-stat="requests">0</strong></div><div><span>Completed</span><strong data-stat="successful">0</strong></div><div><span>Cache reuses</span><strong data-stat="cacheHits">0</strong></div><div><span>Classifier decisions</span><strong data-stat="decisions">0</strong></div><div><span>Input tokens</span><strong data-stat="inputTokens">0</strong></div><div><span>Output tokens</span><strong data-stat="outputTokens">0</strong></div></div><div class="cost-row"><span>Estimated cost</span><strong data-stat="cost">$0.000000</strong></div><p id="usage-breakdown" class="small"></p><p id="usage-since" class="small"></p><p id="usage-missing" class="small"></p><details class="pricing"><summary>Cost estimate</summary><p class="small">Estimates use API token counts and the rates below. Rate changes apply to future requests. Check TypeSafe for actual charges. <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noreferrer">TypeSafe pricing</a></p><div class="rate-fields"><label>Input USD / million<input id="input-rate" type="number" min="0" max="10000" step="any"></label><label>Output USD / million<input id="output-rate" type="number" min="0" max="10000" step="any"></label></div><button type="button" id="save-rates">Save rates</button><p id="rate-status" role="status" class="small"></p></details></section>
+<form id="settings">
+<section>
+<label for="apiKey">TypeSafe API key</label>
+<div class="key-row"><input id="apiKey" type="password" autocomplete="off" spellcheck="false" placeholder="API key"><button id="show" type="button">Show</button></div>
+<p class="small">Stored on this device. <a href="https://console.typesafe.ai" target="_blank" rel="noreferrer">Get a key <img src="icons/external-link.svg" alt=""></a></p>
+<label class="toggle"><input type="checkbox" id="enabled"><span>Live classification</span></label>
+<p class="small">When enabled, draft text is sent to TypeSafe as you type.</p>
+<label class="toggle"><input type="checkbox" id="viewedPosts"><span>Label posts I view</span></label>
+<p class="small">Send the posts you read to TypeSafe for labels.</p>
+</section>
+<section><h2>Classifiers</h2><div id="classifiers" class="grid"></div></section>
+<section><h2>Custom classifiers</h2><div id="custom-classifiers"></div><button type="button" id="add-custom">Add classifier</button></section>
+<section><h2>Post filters</h2><label class="toggle"><input type="checkbox" id="filters-enabled"><span>Enable filters</span></label><p class="small">The first matching rule applies. Enable its classifier above. You can reveal filtered posts at any time. Images are not analyzed.</p><div id="filter-rules"></div><button type="button" id="add-filter">Add rule</button></section>
+<footer><p id="status" role="status" aria-live="polite"></p><button type="submit" class="primary">Save settings</button></footer>
+</form>
+<section class="sites-section"><h2>Sites</h2><p class="small">Bluesky is included. Add other sites below.</p>
+<div id="sites-list"></div>
+<label for="site-domain">Domain</label><div class="key-row"><input id="site-domain" type="text" autocomplete="off" spellcheck="false" placeholder="Enter a domain"><button type="button" id="add-site">Add site</button></div>
+<div id="site-suggestions" aria-label="Suggested sites"></div>
+<p class="small">Chrome will ask for access to each site you add. Only add sites you trust.</p><p id="site-status" role="status" aria-live="polite"></p>
+</section><p class="small"><a href="privacy.html" target="_blank" rel="noreferrer">Privacy policy</a></p></main><script type="module" src="options.js"></script><script type="module" src="site-settings.js"></script><script type="module" src="stats-settings.js"></script></body>
+</html>
